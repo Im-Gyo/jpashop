@@ -10,7 +10,6 @@ import javax.swing.*;
 import java.util.List;
 
 @Repository
-@RequiredArgsConstructor
 public class MemberRepository {
 
     //@PersistenceContext JPA가 제공하는 표준어노테이션
