@@ -1,6 +1,3 @@
-# jpashop
-SpringBoot+JPA
-
 SpringBoot+JPA Study Project
 =============
 Technology Stack
