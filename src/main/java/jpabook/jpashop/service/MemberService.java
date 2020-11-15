@@ -12,7 +12,7 @@ import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
-@RequiredArgsConstructor // final이 있는 필드만 가지고 생성자를 만들어줌
+@RequiredArgsConstructor
 public class MemberService {
 
     private final MemberRepository memberRepository;

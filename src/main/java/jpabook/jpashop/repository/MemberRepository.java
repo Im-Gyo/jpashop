@@ -3,21 +3,15 @@ package jpabook.jpashop.repository;
 import jpabook.jpashop.domain.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.swing.*;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
-    //@PersistenceContext JPA가 제공하는 표준어노테이션
-    private final EntityManager em; //Spring이 엔티티매니저를 만들어서 여기에 주입해줌
 
-    public MemberRepository(EntityManager em) {
-        this.em = em;
-    }
+    private final EntityManager em; //Spring이 엔티티매니저를 만들어서 여기에 주입해줌
 
     public void save(Member member){
         em.persist(member);
