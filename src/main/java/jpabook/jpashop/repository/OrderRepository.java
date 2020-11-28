@@ -38,7 +38,7 @@ public class OrderRepository {
              jpql += " o.status = :status";
          }
             //회원 이름 검색
-         if (StringUtils.hasText(orderSearch.getMembername())) {
+         if (StringUtils.hasText(orderSearch.getMemberName())) {
              if (isFirstCondition) {
                  jpql += " where";
                  isFirstCondition = false;
@@ -52,8 +52,8 @@ public class OrderRepository {
          if (orderSearch.getOrderStatus() != null) {
              query = query.setParameter("status", orderSearch.getOrderStatus());
          }
-         if (StringUtils.hasText(orderSearch.getMembername())) {
-             query = query.setParameter("name", orderSearch.getMembername());
+         if (StringUtils.hasText(orderSearch.getMemberName())) {
+             query = query.setParameter("name", orderSearch.getMemberName());
          }
          return query.getResultList();
      }
